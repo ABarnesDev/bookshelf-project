@@ -1,0 +1,14 @@
+div {
+    text-align: center;
+}
+div p {
+    line-height: 1.5;
+    font-size: 1.1rem;
+    padding: 30px;
+    margin: auto;
+    max-width: 500px;
+}
+div p a {
+    color: #378eff;
+    text-decoration: none;
+}

@@ -1,0 +1,41 @@
+div#book {
+    text-align: center;
+}
+div#book p {
+    font-size: 1.1rem;
+
+    color: #673ab7;
+}
+div#book label {
+    display: block;
+}
+div#book mat-slider {
+    margin: 0;
+    padding: 0;
+}
+div img {
+    width: 50%;
+    min-width: 280px;
+}
+button {
+    min-width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+    div#book {
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+    div img {
+        justify-self: end;
+        margin-left: 80px;
+        min-width: 350px;
+    }
+    button {
+        grid-column: 1/-1;
+        justify-self: center;
+        min-width: 200px;
+    }
+}

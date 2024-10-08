@@ -1,0 +1,31 @@
+<div id="book">
+    <img src="{{book.bookCoverURL}}">
+
+    <div id="bookDetails">
+        <h1>{{book.title}}</h1>
+        <h2>Author</h2>
+        <p>{{book.authors}}</p>
+        <h2>Publisher</h2>
+        <p>{{book.publisher}}</p>
+        <h2>Publication Date</h2>
+        <p>{{book.date | date}}</p>
+        <h2>Pages</h2>
+        <p>{{book.pages}}</p>
+
+        <mat-form-field>
+            <mat-label>Shelf</mat-label>
+            <mat-select [(value)]="selected" (valueChange)="changeShelf()">
+                <mat-option value="bookshelf" selected>Bookshelf</mat-option>
+                <mat-option value="completedBooks">Completed Books</mat-option>
+                <mat-option value="wishList">Wish List</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-slider min="1" max="5" step="1" discrete showTickMarks>
+            <input matSliderThumb [(value)]="rating" (valueChange)="updateRating()">
+        </mat-slider>
+        <label>Rate this book</label>
+        
+    </div>
+    <button routerLink="/edit-book/{{book._id}}" mat-raised-button color="primary">Edit Book</button>
+</div>

@@ -1,0 +1,10 @@
+h1 {
+    text-align: center;
+}
+form {
+    max-width: 500px;
+    margin: auto;
+}
+form mat-form-field {
+    display: block;
+}

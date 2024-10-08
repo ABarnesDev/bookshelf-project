@@ -1,0 +1,12 @@
+<div>
+    <h1>Wish List</h1>
+    <div>
+        <app-book-card *ngFor="let book of books" [book]="book" routerLink="/book/{{book._id}}"></app-book-card>
+    </div>
+    <p *ngIf="books.length < 1">There are no books in this shelf</p>
+    <a routerLink="/add-book">
+        <button mat-fab color="primary">
+            +
+        </button>
+    </a>
+</div>

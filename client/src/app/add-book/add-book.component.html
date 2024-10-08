@@ -1,0 +1,47 @@
+<h1>Add Book</h1>
+
+<form [formGroup]="bookForm">
+    <mat-form-field appearance="outline">
+        <mat-label>Book Title</mat-label>
+        <input matInput type="text" formControlName="title" required />
+        <mat-error>Book Title is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Authors</mat-label>
+        <input matInput type="text" formControlName="authors" required />
+        <mat-error>Book Author is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Publisher</mat-label>
+        <input matInput type="text" formControlName="publisher" required />
+        <mat-error>Book Publisher is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Publication Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="date" required />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error>Release Date is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Book Cover URL</mat-label>
+        <input matInput type="text" formControlName="bookCoverURL" required />
+        <mat-error>Book Cover URL is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Number of Pages</mat-label>
+        <input matInput type="number" formControlName="pages" required />
+        <mat-error>Number of Pages is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Shelf</mat-label>
+        <mat-select formControlName="shelf" required>
+            <mat-option value="bookshelf">Bookshelf</mat-option>
+            <mat-option value="completedBooks">Completed Books</mat-option>
+            <mat-option value="wishList">Wish List</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button [disabled]="!bookForm.valid" (click)="addBook()" type="submit"  mat-raised-button color="primary">Add Book</button>
+</form>
