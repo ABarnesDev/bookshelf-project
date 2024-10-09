@@ -1,4 +1,4 @@
-# Bookshelf Project Using Angular and Node.js
+# Bookshelf Project
 
 
 ## Project Overview
@@ -23,22 +23,22 @@ This was built as a school project. This full-stack web application is designed 
     ```shell
     git clone https://github.com/ABarnesDev/bookshelf-project.git
     ```
-2. Install the backend dependencies by navigating to the `api` folder in your terminal and running the following command:
+2. Install the backend dependencies by navigating to the project's `api` folder in your terminal and running the following command:
     ```shell
     npm install
     ```
-3. Install the frontend dependencies by navigating to the `client` folder in your terminal and running the following command:
+3. Install the frontend dependencies by navigating to the project's `client` folder in your terminal and running the following command:
    ```shell
    npm install
    ```
 
 ### Running the Application
 1. Create a local MongoDB connection using the host localhost:27017.
-2. Start the backend of the application by navigating to the `api` folder in your terminal and running the following command:
+2. Start the backend of the application by navigating to the project's `api` folder in your terminal and running the following command:
    ```shell
    node .
    ```
-3. Start the frontend of the application by navigating to the `client` folder in your terminal and running the following command:
+3. Start the frontend of the application by navigating to the project's `client` folder in your terminal and running the following command:
    ```shell
    npm run start
    ```
